@@ -3,7 +3,7 @@ A Vendetta plugin for hiding messages locally.
 
 https://mystravil.github.io/vendetta-plugins/HideMessages/
 
-# BetterBetterChatGestures
-A Fork of [BetterChatGestures](https://github.com/acquitelol/better-chat-gestures), mainly fixes bugs.
+# BetterBetterBetterChatGestures
+A Fork of BetterBetterChatGestures.
 
-https://mystravil.github.io/vendetta-plugins/BetterBetterChatGestures/
+https://joamoncab.github.io/vendetta-plugins/BetterBetterChatGestures/
