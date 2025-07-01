@@ -182,7 +182,7 @@ const BetterChatGestures: Plugin = {
                                     currentMessageID,
                                     enrichedNativeEvent.content
                                 );
-                            } else if (storage.userEdit) {
+                            } else if (storage.userDelete) {
                                 Messages.startDeleteMessage(
                                     ChannelID,
                                     currentMessageID,
