@@ -54,6 +54,7 @@ export default () => {
 	if (storage.tapUsernameMention === undefined) storage.tapUsernameMention = false;
 	if (storage.reply === undefined) storage.reply = true;
 	if (storage.userEdit === undefined) storage.userEdit = true;
+	if (storage.userDelete === undefined) storage.userDelete = false;
 	if (storage.keyboardPopup === undefined) storage.keyboardPopup = true;
 	if (storage.delay === undefined) storage.delay = "300";
 	
@@ -119,14 +120,27 @@ export default () => {
                />
                <FormDivider />
                <FormRow
-                  label={`${storage.userEdit ? "Double tap to edit" : "Double tap to reply to"} your own messages`}
-                  subLabel={`Allows you to double tap on any of your own messages to ${storage.userEdit ? "edit" : "reply to"} them.`}
-                  onLongPress={() => Miscellaneous.displayToast(`When double tapping on any of your own messages, you can now ${storage.userEdit ? "edit them" : "reply to them"}!`, 'tooltip')}
-                  leading={<FormRow.Icon style={styles.icon} source={storage.userEdit ? Icons.Settings.Edit : Icons.Settings.Reply} />}
+                  label={`Double tap to edit your own messages`}
+                  subLabel={`Allows you to double tap on any of your own messages to edit them.`}
+                  onLongPress={() => Miscellaneous.displayToast(`When double tapping on any of your own messages, you can now edit them!`, 'tooltip')}
+                  leading={<FormRow.Icon style={styles.icon} source={Icons.Settings.Edit} />}
                   trailing={<FormSwitch
                      value={storage.userEdit}
                      onValueChange={() => {
                         storage.userEdit = !storage.userEdit;
+                     }}
+                  />}
+               />
+               <FormDivider />
+               <FormRow
+                  label={`Double tap to delete your own messages`}
+                  subLabel={`Allows you to double tap on any of your own messages to delete them.`}
+                  onLongPress={() => Miscellaneous.displayToast(`When double tapping on any of your own messages, you can now delete them!`, 'tooltip')}
+                  leading={<FormRow.Icon style={styles.icon} source={Icons.Settings.Delete} />}
+                  trailing={<FormSwitch
+                     value={storage.userDelete}
+                     onValueChange={() => {
+                        storage.userDelete = !storage.userDelete;
                      }}
                   />}
                />

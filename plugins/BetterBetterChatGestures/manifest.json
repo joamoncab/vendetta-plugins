@@ -1,10 +1,10 @@
 {
-    "name": "BetterBetterChatGestures",
-    "description": "Adds several new gestures in the chat.",
+    "name": "BetterBetterBetterChatGestures",
+    "description": "Adds several new gestures in the chat. Including delete.",
     "authors": [
         {
-            "name": "Rosie<3, forked by MYSTRAVIL",
-            "id": "319928470849454080"
+            "name": "Rosie<3, forked by MYSTRAVIL, reforked by j",
+            "id": "1356632712861192242"
         }
     ],
     "main": "src/index.tsx",
