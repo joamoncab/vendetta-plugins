@@ -266,6 +266,7 @@ const BetterChatGestures: Plugin = {
             
             storage.reply ??= true;
             storage.userEdit ??= true;
+            storage.userDelete ??= false;
             storage.keyboardPopup ??= false;
             storage.delay ??= "300";
             
