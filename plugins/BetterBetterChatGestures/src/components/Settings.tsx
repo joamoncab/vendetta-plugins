@@ -127,6 +127,7 @@ export default () => {
                   trailing={<FormSwitch
                      value={storage.userEdit && !storage.userDelete}
                      onValueChange={() => {
+                        storage.userDelete = storage.userEdit;
                         storage.userEdit = !storage.userEdit;
                      }}
                   />}
@@ -140,6 +141,7 @@ export default () => {
                   trailing={<FormSwitch
                      value={storage.userDelete && !storage.userEdit}
                      onValueChange={() => {
+                        storage.userEdit = storage.userDelete;
                         storage.userDelete = !storage.userDelete;
                      }}
                   />}
