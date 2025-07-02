@@ -185,8 +185,7 @@ const BetterChatGestures: Plugin = {
                             } else if (storage.userDelete) {
                                 Messages.deleteMessage(
                                     ChannelID,
-                                    currentMessageID,
-                                    enrichedNativeEvent.content
+                                    currentMessageID
                                 );
                             } else if (storage.reply && channel) {
                                 ReplyManager.createPendingReply({
