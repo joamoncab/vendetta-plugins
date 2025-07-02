@@ -11,7 +11,7 @@ const ChatInputRef = findByProps("insertText");
 const ChannelStore = findByStoreName("ChannelStore");
 const MessageStore = findByStoreName("MessageStore");
 const UserStore = findByStoreName("UserStore");
-const Messages = findByProps("sendMessage", "startEditMessage", "startDeleteMessage");
+const Messages = findByProps("sendMessage", "startEditMessage");
 const ReplyManager = findByProps("createPendingReply");
 const { MessagesHandlers } = findByProps("MessagesHandlers");
 
@@ -182,13 +182,13 @@ const BetterChatGestures: Plugin = {
                                     currentMessageID,
                                     enrichedNativeEvent.content
                                 );
-                            }/* else if (storage.userDelete) {
+                            } else if (storage.userDelete) {
                                 Messages.startDeleteMessage(
                                     ChannelID,
                                     currentMessageID,
                                     enrichedNativeEvent.content
                                 );
-                            }*/ else if (storage.reply && channel) {
+                            } else if (storage.reply && channel) {
                                 ReplyManager.createPendingReply({
                                     channel,
                                     message,
