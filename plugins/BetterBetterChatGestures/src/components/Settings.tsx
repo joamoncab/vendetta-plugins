@@ -125,7 +125,7 @@ export default () => {
                   onLongPress={() => Miscellaneous.displayToast(`When double tapping on any of your own messages, you can now edit them!`, 'tooltip')}
                   leading={<FormRow.Icon style={styles.icon} source={Icons.Settings.Edit} />}
                   trailing={<FormSwitch
-                     value={storage.userEdit}
+                     value={storage.userEdit && !storage.userDelete}
                      onValueChange={() => {
                         storage.userEdit = !storage.userEdit;
                      }}
@@ -138,7 +138,7 @@ export default () => {
                   onLongPress={() => Miscellaneous.displayToast(`When double tapping on any of your own messages, you can now delete them!`, 'tooltip')}
                   leading={<FormRow.Icon style={styles.icon} source={Icons.Settings.Delete} />}
                   trailing={<FormSwitch
-                     value={storage.userDelete}
+                     value={storage.userDelete && !storage.userEdit}
                      onValueChange={() => {
                         storage.userDelete = !storage.userDelete;
                      }}
